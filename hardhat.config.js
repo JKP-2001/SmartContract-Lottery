@@ -34,7 +34,16 @@ module.exports = {
 		// coinmarketcap: COINMARKETCAP_API_KEY,
 		// token: "ETH",
 	},
-	solidity: "0.8.17",
+	solidity: {
+		compilers: [
+			{
+				version: "0.8.17",
+			},
+			{
+				version: "0.4.24",
+			},
+		],
+	},
 	namedAccounts: {
 		deployer: {
 			default: {
@@ -43,6 +52,9 @@ module.exports = {
 			player: {
 				default: 1,
 			},
+		},
+		mocha: {
+			timeout: 500000,
 		},
 	},
 };

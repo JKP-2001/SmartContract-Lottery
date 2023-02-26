@@ -58,8 +58,8 @@ module.exports = {
 				default: 1,
 			},
 		},
-		mocha: {
-			timeout: 500000,
-		},
+	},
+	mocha: {
+		timeout: 500000,
 	},
 };

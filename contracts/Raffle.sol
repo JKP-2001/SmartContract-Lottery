@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 
 import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
-import "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol";
+import "@chainlink/contracts/src/v0.8/interfaces/AutomationCompatibleInterface.sol";
 
 error Raffle__NotEnoughETHEntered();
 error Raffle__TransferFailed();
@@ -15,7 +15,7 @@ error Raffle__UpkeepNotNeeded(
     uint256 raffleState
 );
 
-contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
+contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
     enum RaffleState {
         OPEN,
         CALCULATING
